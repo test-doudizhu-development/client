@@ -119,9 +119,9 @@ export default function Room() {
         //const ws = new WebSocket(`ws:/doudizhu-server.oa.r.appspot.com/ws/room/sync/${adminData?.token}`);
         //const ws = new WebSocket(`${apiUrl}/ws/ddz/sync/${adminData?.token}`);
         //本地跑
-        const ws = new WebSocket(`ws:/localhost:8080/ws/ddz/sync/${roomId}/${adminData?.token}`);
+        //const ws = new WebSocket(`ws:/localhost:8080/ws/ddz/sync/${roomId}/${adminData?.token}`);
         //云上跑
-        //const ws = new WebSocket(`wss:/heroic-idea-381412.oa.r.appspot.com/ws/ddz/sync/${adminData?.token}`);
+        const ws = new WebSocket(`wss:/test-ddzdep-server.oa.r.appspot.com/ws/ddz/sync/${adminData?.token}`);
 
         ws.onopen = () => {
             console.log('WebSocket connected');
