@@ -121,7 +121,7 @@ export default function Room() {
         //本地跑
         //const ws = new WebSocket(`ws:/localhost:8080/ws/ddz/sync/${roomId}/${adminData?.token}`);
         //云上跑
-        const ws = new WebSocket(`wss:/test-ddzdep-server.oa.r.appspot.com/ws/ddz/sync/${adminData?.token}`);
+        const ws = new WebSocket(`wss:/test-ddzdep-server.oa.r.appspot.com/ws/ddz/sync/${roomId}/${adminData?.token}`);
 
         ws.onopen = () => {
             console.log('WebSocket connected');
